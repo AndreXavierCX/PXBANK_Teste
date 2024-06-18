@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Estilo para o componente m-portlet */
+.m-portlet {
+    background-color: #ffffff; /* Cor de fundo do componente */
+    border: 1px solid #ebedf2; /* Borda do componente */
+    border-radius: 4px; /* Arredondamento das bordas */
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); /* Sombra do componente */
+    margin-bottom: 20px; /* Espaçamento inferior */
+  }
+  
+  /* Estilo para a cabeçalho do componente */
+  .m-portlet__head {
+    background-color: #f8f9fa; /* Cor de fundo da cabeçalho */
+    border-bottom: 1px solid #ebedf2; /* Borda inferior da cabeçalho */
+    border-radius: 4px 4px 0px 0px; /* Arredondamento das bordas */
+    padding: 15px; /* Espaçamento interno */
+  }
+  
+  /* Estilo para o texto do título na cabeçalho */
+  .m-portlet__head-text {
+    margin: 0; /* Remove margem do texto */
+  }
+  
+  /* Estilo para o corpo do componente */
+  .m-portlet__body {
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  /* Estilo para o rodapé do componente */
+  .m-portlet__foot {
+    background-color: #f8f9fa; /* Cor de fundo do rodapé */
+    border-top: 1px solid #ebedf2; /* Borda superior do rodapé */
+    border-radius: 0px 0px 4px 4px; /* Arredondamento das bordas */
+    padding: 15px; /* Espaçamento interno */
+  }
+  

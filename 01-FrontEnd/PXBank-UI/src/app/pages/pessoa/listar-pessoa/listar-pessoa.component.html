@@ -1,0 +1,95 @@
+<div class="head">
+    <fieldset>
+        <mat-grid-list cols="4" rowHeight="120px">
+            <mat-grid-tile colspan="3">
+                <div style="width: 100%;">
+                    <div style="vertical-align: middle; margin-left: 5%; float: left;"
+                        class="col-md-4 m--margin-bottom-10-mobile">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput #searchInput placeholder="Pesquisar">
+                        </mat-form-field>
+                    </div>
+                    <div style="vertical-align: middle; margin-left: 5%; float: left;"
+                        class="col-md-4 m--margin-bottom-10-mobile">
+                        <mat-form-field>
+                            <mat-label>Departamento</mat-label>
+                            <mat-select (selectionChange)="statusSelectionChange()" [(value)]="departamentoID">
+                                <mat-option value="0"></mat-option>
+                                <mat-option *ngFor="let item of departamentos"
+                                    value="{{item.DepartamentoID}}">{{item.Nome}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+                <button (click)="addItem()" mat-stroked-button color="primary">
+                    Novo Funcionario
+                </button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </fieldset>
+</div>
+
+<div class="container-main">
+    <fieldset>
+        <table mat-table #table class="lmat-elevation-z8" [dataSource]="dataSource" matSort matSortActive=""
+            matSortDirection="asc" matSortDisableClear>
+
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.Nome }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="departamento">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Departamento</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.Departamento.Nome }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="salario">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>salario</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.Salario }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="dataNascimento">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Nascimento</th>
+                <td mat-cell *matCellDef="let pessoa">{{ fu.DateToString(pessoa.DataNascimento) }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="numfilhos">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Num Filhos</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.NumFilhos }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="acoes">
+                <th mat-header-cell *matHeaderCellDef>Ações</th>
+                <td mat-cell *matCellDef="let pessoa">
+                    <button mat-mini-fab color="primary" (click)="editItem(pessoa, false)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+
+                    <button mat-mini-fab color="warn" (click)="deleteItem(pessoa)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+
+
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            <div class="mat-table__message" *ngIf="!dataSource.hasItems">Sem registros</div>
+            <!-- Message for empty data  -->
+        </table>
+        <div class="mat-table__bottom">
+            <!-- MATERIAL SPINNER | Url: 'https://material.angular.io/components/progress-spinner/overview' -->
+            <mat-spinner [diameter]="20" *ngIf="dataSource.loading$ | async"></mat-spinner>
+            <!-- MATERIAL PAGINATOR | Binded to dasources -->
+            <!-- See off.documentations 'https://material.angular.io/components/paginator/overview' -->
+            <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 50]" [length]="dataSource.paginatorTotal$ | async"
+                [showFirstLastButtons]="true"></mat-paginator>
+        </div>
+        <!-- end: BOTTOM -->
+    </fieldset>
+
+</div>

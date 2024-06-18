@@ -1,0 +1,75 @@
+<div class="m-portlet"
+    [ngClass]="{ 'm-portlet--body-progress' : viewLoading, 'm-portlet--body-progress-overlay' : loadingAfterSubmit }">
+    <h1 mat-dialog-title>{{getTitle()}}</h1>
+
+
+    <ng-container mPortletHeadTools>
+        <button matTooltip="  " color="primary" type="button">
+        </button>
+        <!-- Buttons (Material Angular) | See off.documenations 'https://material.angular.io/components/button/overview' -->
+        <!-- mat-raised-button | Rectangular contained button w/ elevation  -->
+    </ng-container>
+
+    <div *ngIf="!form" class="m-portlet__body-progress">
+        <mat-spinner [diameter]="20"></mat-spinner>
+    </div>
+    <form *ngIf="form" class="m-form" [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
+        <div style="margin: 10%;">
+
+
+
+            <div style="width: 100%;">
+                <mat-form-field style="width: 100%;" class="mat-form-field-fluid">
+                    <input style="width: 100%;" matInput placeholder="Nome" formControlName="Nome" [maxLength]="100" />
+                </mat-form-field>
+            </div>
+
+            <div style="width: 100%;">
+                <mat-form-field appearance="fill">
+                    <mat-label>CPF</mat-label>
+                    <input matInput mask="000.000.000-00" formControlName="CPF" placeholder="Digite seu CPF"
+                        [dropSpecialCharacters]="false">
+                </mat-form-field>
+            </div>
+
+            <div style="width: 100%;">
+                <mat-form-field>
+                    <mat-label>Departamento</mat-label>
+                    <mat-select *ngIf="departamentos" formControlName="DepartamentoID">
+                        <mat-option *ngFor="let dados of departamentos"
+                            [value]="dados.DepartamentoID">{{dados.Nome}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div style="width: 100%;">
+                <mat-form-field style="width: 100%;" class="mat-form-field-fluid">
+                    <input style="width: 100%;" matInput placeholder="Salário" formControlName="Salario"
+                        [maxLength]="100" mask="0*.00" [dropSpecialCharacters]="false" />
+                </mat-form-field>
+            </div>
+
+            <div style="width: 100%;">
+                <mat-form-field style="width: 100%;" class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dp" [formControlName]="'DataNascimento'">
+                    <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                    <mat-datepicker #dp></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <app-listar-dependente *ngIf="item.PessoaID > 0" [pessoaID]="item.PessoaID"></app-listar-dependente>
+
+        </div>
+        <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+            <div style="width: 100%">
+                <button type="button" mat-raised-button (click)="onClose()" cdkFocusInitial matTooltip="Cancelar">
+                    Cancelar
+                </button>&nbsp;
+                <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary"
+                    [disabled]="viewLoading " matTooltip="Salvar">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,56 @@
+<div class="container-main">
+    <fieldset>
+        <table mat-table #table class="lmat-elevation-z8" [dataSource]="dataSource" matSort matSortActive=""
+            matSortDirection="asc" matSortDisableClear>
+
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.Nome }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="CPF">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>CPF</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.CPF}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Idade">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Idade</th>
+                <td mat-cell *matCellDef="let pessoa">{{ pessoa.Idade }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="acoes">
+                <th mat-header-cell *matHeaderCellDef>Ações</th>
+                <td mat-cell *matCellDef="let pessoa">
+                    <button type="button" mat-mini-fab color="primary" (click)="editItem(pessoa, false)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+
+                    <button type="button" mat-mini-fab color="warn" (click)="deleteItem(pessoa)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+
+
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            <div class="mat-table__message" *ngIf="!dataSource.hasItems">Sem registros</div>
+            <!-- Message for empty data  -->
+        </table>
+        <div class="mat-table__bottom">
+            <!-- MATERIAL SPINNER | Url: 'https://material.angular.io/components/progress-spinner/overview' -->
+            <mat-spinner style="position: center;" [diameter]="20" *ngIf="dataSource.loading$ | async"></mat-spinner>
+            <!-- MATERIAL PAGINATOR | Binded to dasources -->
+            <!-- See off.documentations 'https://material.angular.io/components/paginator/overview' -->
+            <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 50]" [length]="dataSource.paginatorTotal$ | async"
+                [showFirstLastButtons]="true"></mat-paginator>
+        </div>
+        <!-- end: BOTTOM -->
+    </fieldset>
+
+
+    <button type="button" style="margin-top: 3%;" (click)="addItem()" mat-stroked-button color="primary">
+        Novo Dependente
+    </button>
+</div>
