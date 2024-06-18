@@ -44,8 +44,7 @@
 
             <div style="width: 100%;">
                 <mat-form-field style="width: 100%;" class="mat-form-field-fluid">
-                    <input style="width: 100%;" matInput placeholder="Salário" formControlName="Salario"
-                        [maxLength]="100" mask="0*.00" [dropSpecialCharacters]="false" />
+                    <input style="width: 100%;" matInput placeholder="Salário" formControlName="Salario"  mask="separator.2" thousandSeparator="." decimalMarker="," prefix="R$ " class="form-control"/>
                 </mat-form-field>
             </div>
 

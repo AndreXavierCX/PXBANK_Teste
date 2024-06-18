@@ -48,7 +48,7 @@
 
             <ng-container matColumnDef="salario">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>salario</th>
-                <td mat-cell *matCellDef="let pessoa">{{ pessoa.Salario }}</td>
+                <td mat-cell *matCellDef="let pessoa">RS {{ pessoa.Salario | mask: 'separator.2' : { thousandSeparator: '.', decimalMarker: ',' }  }}</td>
             </ng-container>
 
             <ng-container matColumnDef="dataNascimento">
@@ -57,7 +57,7 @@
             </ng-container>
 
             <ng-container matColumnDef="numfilhos">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Num Filhos</th>
+                <th mat-header-cell *matHeaderCellDef >Num Filhos</th>
                 <td mat-cell *matCellDef="let pessoa">{{ pessoa.NumFilhos }}</td>
             </ng-container>
 

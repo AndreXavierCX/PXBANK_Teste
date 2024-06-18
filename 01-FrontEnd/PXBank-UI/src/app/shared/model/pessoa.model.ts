@@ -5,7 +5,7 @@ export class PessoaModel extends BaseModel {
     Nome: string = "";
     Cpf: string = "";
     DepartamentoID: number = 0;
-    Salario: number = 0;
+    Salario?: number;
     DataNascimento: Date = new Date();
     NumFilhos: number = 0;
     IsAtivo: boolean = true;
