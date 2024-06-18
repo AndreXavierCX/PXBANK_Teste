@@ -23,7 +23,7 @@ namespace PXBank.Service.Service
 
         public IEnumerable<Pessoa> GetAllPessoa(Expression<Func<Pessoa, bool>> predicate, string sortOrder, string sortField, int pageNumber, int pageSize, ref int totalCount)
         {
-            return db.GetAllPessoa(predicate, sortOrder, sortField, pageNumber, pageSize, totalCount);
+            return db.GetAllPessoa(predicate, sortOrder, sortField, pageNumber, pageSize, ref totalCount);
         }
     }
 }

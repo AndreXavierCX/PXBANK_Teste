@@ -21,7 +21,7 @@ namespace PXBank.Business.Repository
 
         }
 
-        public IEnumerable<Dependente> GetAllDependente(Expression<Func<Dependente, bool>> predicate, string sortOrder, string sortField, int pageNumber, int pageSize, int totalCount)
+        public IEnumerable<Dependente> GetAllDependente(Expression<Func<Dependente, bool>> predicate, string sortOrder, string sortField, int pageNumber, int pageSize,ref int totalCount)
         {
             var pos = pageSize * (pageNumber);
             var q = _context.Dependente.AsNoTracking()

@@ -21,7 +21,7 @@ namespace PXBank.Business.Repository
 
         }
 
-        public IEnumerable<Pessoa> GetAllPessoa(Expression<Func<Pessoa, bool>> predicate, string sortOrder, string sortField, int pageNumber, int pageSize, int totalCount)
+        public IEnumerable<Pessoa> GetAllPessoa(Expression<Func<Pessoa, bool>> predicate, string sortOrder, string sortField, int pageNumber, int pageSize, ref int totalCount)
         {
             var pos = pageSize * (pageNumber);
             var q = _context.Pessoa.AsNoTracking().Include(p => p.Departamento).Include(p => p.Dependente)

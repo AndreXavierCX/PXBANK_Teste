@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PXBank.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+057cbd8c634cbe5d2e4bf9665713c298a714149c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a8b3242316fd4f3a5dcdec46e847c5a86e98d3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PXBank.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PXBank.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
