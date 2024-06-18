@@ -1,0 +1,15 @@
+D:\PXBANK_Teste\04-Business\PXBank.Business\bin\Debug\net7.0\PXBank.Business.deps.json
+D:\PXBANK_Teste\04-Business\PXBank.Business\bin\Debug\net7.0\PXBank.Business.runtimeconfig.json
+D:\PXBANK_Teste\04-Business\PXBank.Business\bin\Debug\net7.0\PXBank.Business.dll
+D:\PXBANK_Teste\04-Business\PXBank.Business\bin\Debug\net7.0\PXBank.Business.pdb
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.csproj.AssemblyReference.cache
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.AssemblyInfoInputs.cache
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.AssemblyInfo.cs
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.csproj.CoreCompileInputs.cache
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.sourcelink.json
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.dll
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\refint\PXBank.Business.dll
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.pdb
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\PXBank.Business.genruntimeconfig.cache
+D:\PXBANK_Teste\04-Business\PXBank.Business\obj\Debug\net7.0\ref\PXBank.Business.dll

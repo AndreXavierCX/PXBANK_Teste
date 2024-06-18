@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PXBank.Business.CustomAttributes;
 
 namespace PXBank.Business.Entity
 {
@@ -27,6 +28,7 @@ namespace PXBank.Business.Entity
         [Required]
         [StringLength(100)]
         [Column("cpf")]
+        [CPF(ErrorMessage = "CPF inválido.")]
         public string CPF { get; set; }
 
         [Required]

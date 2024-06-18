@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nsARwSh6+nUhg05r0KvkkEejgmv14d34K6X8WGHjecg=",
+  "Source": "PXBank.WebAPI",
+  "BasePath": "_content/PXBank.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -123,9 +123,9 @@ namespace PXBank.WebAPI.Controllers
             {
                 return BadRequest(ex.ToBadRequest());
             }
-            catch
+            catch(Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
