@@ -1,0 +1,37 @@
+
+create table  Departamento (
+    DepartamentoID serial PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Descricao varchar(500),
+    DataCadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Pessoa (
+    PessoaID SERIAL PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    CPF VARCHAR(30) NOT NULL,
+    DepartamentoID INT NOT NULL,
+    Salario DECIMAL(10, 2) NOT NULL,
+   	DataNascimento DATE NOT NULL,
+    NumFilhos INT NOT NULL,
+	IsAtivo bool not null,
+    FOREIGN KEY (DepartamentoID) REFERENCES Departamento (DepartamentoID)
+);
+
+create table Dependente(
+	DependenteID serial primary key,
+	PessoaID int not null,
+	Nome varchar(100) not null,
+	CPF varchar(100) not null,
+	DataNascimento date not null,
+	FOREIGN KEY (PessoaID) REFERENCES Pessoa (PessoaID)
+);
+
+-- Inserindo registros na tabela departamento
+INSERT INTO departamento (nome, descricao) VALUES 
+('Recursos Humanos', 'Responsável pela gestão de pessoas e políticas de RH.'),
+('TI', 'Responsável pela infraestrutura tecnológica e desenvolvimento de software.'),
+('Financeiro', 'Responsável pela gestão financeira e contabilidade da empresa.'),
+('Marketing', 'Responsável pela promoção e imagem da empresa no mercado.'),
+('Operações', 'Responsável pelas operações diárias e logística da empresa.');
+
