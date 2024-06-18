@@ -1671,11 +1671,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repo\\prova pxbank\\PXBank\\02-BackEnd\\PXBank.WebAPI\\PXBank.WebAPI.csproj",
+      "projectUniqueName": "D:\\PXBANK_Teste\\02-BackEnd\\PXBank.WebAPI\\PXBank.WebAPI.csproj",
       "projectName": "PXBank.WebAPI",
-      "projectPath": "D:\\repo\\prova pxbank\\PXBank\\02-BackEnd\\PXBank.WebAPI\\PXBank.WebAPI.csproj",
+      "projectPath": "D:\\PXBANK_Teste\\02-BackEnd\\PXBank.WebAPI\\PXBank.WebAPI.csproj",
       "packagesPath": "C:\\Users\\carra\\.nuget\\packages\\",
-      "outputPath": "D:\\repo\\prova pxbank\\PXBank\\02-BackEnd\\PXBank.WebAPI\\obj\\",
+      "outputPath": "D:\\PXBANK_Teste\\02-BackEnd\\PXBank.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1692,11 +1692,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\repo\\prova pxbank\\PXBank\\03-Service\\PXBank.Service\\PXBank.Service.csproj": {
-              "projectPath": "D:\\repo\\prova pxbank\\PXBank\\03-Service\\PXBank.Service\\PXBank.Service.csproj"
+            "D:\\PXBANK_Teste\\03-Service\\PXBank.Service\\PXBank.Service.csproj": {
+              "projectPath": "D:\\PXBANK_Teste\\03-Service\\PXBank.Service\\PXBank.Service.csproj"
             },
-            "D:\\repo\\prova pxbank\\PXBank\\04-Business\\PXBank.Business\\PXBank.Business.csproj": {
-              "projectPath": "D:\\repo\\prova pxbank\\PXBank\\04-Business\\PXBank.Business\\PXBank.Business.csproj"
+            "D:\\PXBANK_Teste\\04-Business\\PXBank.Business\\PXBank.Business.csproj": {
+              "projectPath": "D:\\PXBANK_Teste\\04-Business\\PXBank.Business\\PXBank.Business.csproj"
             }
           }
         }

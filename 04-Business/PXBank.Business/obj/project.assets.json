@@ -1491,11 +1491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repo\\prova pxbank\\PXBank\\04-Business\\PXBank.Business\\PXBank.Business.csproj",
+      "projectUniqueName": "D:\\PXBANK_Teste\\04-Business\\PXBank.Business\\PXBank.Business.csproj",
       "projectName": "PXBank.Business",
-      "projectPath": "D:\\repo\\prova pxbank\\PXBank\\04-Business\\PXBank.Business\\PXBank.Business.csproj",
+      "projectPath": "D:\\PXBANK_Teste\\04-Business\\PXBank.Business\\PXBank.Business.csproj",
       "packagesPath": "C:\\Users\\carra\\.nuget\\packages\\",
-      "outputPath": "D:\\repo\\prova pxbank\\PXBank\\04-Business\\PXBank.Business\\obj\\",
+      "outputPath": "D:\\PXBANK_Teste\\04-Business\\PXBank.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carra\\AppData\\Roaming\\NuGet\\NuGet.Config",

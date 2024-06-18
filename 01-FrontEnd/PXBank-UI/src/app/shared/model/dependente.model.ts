@@ -6,4 +6,5 @@ export class DependenteModel extends BaseModel{
 	Nome: string = "";
 	CPF: string = "";
 	DataNascimento: Date = new Date();
+	Idade: number = 0;
 }

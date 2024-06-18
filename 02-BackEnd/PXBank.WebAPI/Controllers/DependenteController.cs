@@ -124,7 +124,7 @@ namespace PXBank.WebAPI.Controllers
                 //nao vai utilizar
                 bool inativo = status == 0 ? false : true;
 
-                var emps = _serviceDependente.GetAll(x => (string.IsNullOrEmpty(search) || x.Nome.Contains(search))
+                var emps = _serviceDependente.GetAllDependente(x => (string.IsNullOrEmpty(search) || x.Nome.Contains(search))
                                         && (pessoaID == 0 || x.PessoaID == pessoaID)
                                         , sortOrder, sortField, pageNumber, pageSize, ref totalCount).ToList();
 

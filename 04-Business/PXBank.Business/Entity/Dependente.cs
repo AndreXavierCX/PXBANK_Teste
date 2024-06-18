@@ -35,5 +35,8 @@ namespace PXBank.Business.Entity
 
         [ForeignKey("PessoaID")]
         public Pessoa? Pessoa { get; set; }
+
+        [NotMapped]
+        public int? Idade { get; set; }
     }
 }
