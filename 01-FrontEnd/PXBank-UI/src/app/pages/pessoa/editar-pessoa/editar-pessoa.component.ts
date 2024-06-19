@@ -156,7 +156,9 @@ export class EditarPessoaComponent {
     const controls = this.form.controls;
     const editedItem = this.prepareItem();
 
-    console.log(editedItem);
+    if(this.form.invalid){
+      return;
+    }
 
     if (editedItem.PessoaID > 0) {
       this.updateItem(editedItem);

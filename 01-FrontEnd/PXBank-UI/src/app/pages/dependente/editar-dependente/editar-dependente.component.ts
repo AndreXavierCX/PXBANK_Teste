@@ -155,6 +155,10 @@ export class EditarDependenteComponent {
     const controls = this.form.controls;
     const editedItem = this.prepareItem();
 
+    if(this.form.invalid){
+      return;
+    }
+
     if (editedItem.DependenteID > 0) {
       this.updateItem(editedItem);
     } else {
